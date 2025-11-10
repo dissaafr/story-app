@@ -1,17 +1,20 @@
-import { defineConfig } from 'vite';
-import { resolve } from 'path';
+import { defineConfig } from "vite";
+import { resolve } from "path";
 
-// https://vitejs.dev/config/
 export default defineConfig({
-  root: resolve(__dirname, 'src'),
-  publicDir: resolve(__dirname, 'src', 'public'),
+  base: "/storyApp/",
+  root: resolve(__dirname, "src"),
+  publicDir: resolve(__dirname, "src", "public"),
+  server: {
+    https: true,
+  },
   build: {
-    outDir: resolve(__dirname, 'dist'),
+    outDir: resolve(__dirname, "dist"),
     emptyOutDir: true,
   },
   resolve: {
     alias: {
-      '@': resolve(__dirname, 'src'),
+      "@": resolve(__dirname, "src"),
     },
   },
 });
