@@ -2,7 +2,7 @@ import { defineConfig } from "vite";
 import { resolve } from "path";
 
 export default defineConfig({
-  base: "/storyApp/",
+  base: "/story-app/",
   root: resolve(__dirname, "src"),
   publicDir: resolve(__dirname, "src", "public"),
   server: {
